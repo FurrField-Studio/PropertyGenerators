@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyGenerators.Attributes", "PropertyGenerators.Attributes\PropertyGenerators.Attributes.csproj", "{87E77B91-9C84-4EFE-AACB-48BCBA9CADC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyGenerators.Tests", "PropertyGenerators.Tests\PropertyGenerators.Tests.csproj", "{8962A430-5BE5-467B-8C02-17BD67B23B2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyGenerators.Generators", "PropertyGenerators.Generators\PropertyGenerators.Generators.csproj", "{320FC571-2A79-45DF-85FC-E57C7232A8F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyGenerators.Sample", "PropertyGenerators.Sample\PropertyGenerators.Sample.csproj", "{74E16536-70D2-450B-B440-C9AE1BFD29E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87E77B91-9C84-4EFE-AACB-48BCBA9CADC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E77B91-9C84-4EFE-AACB-48BCBA9CADC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E77B91-9C84-4EFE-AACB-48BCBA9CADC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E77B91-9C84-4EFE-AACB-48BCBA9CADC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8962A430-5BE5-467B-8C02-17BD67B23B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8962A430-5BE5-467B-8C02-17BD67B23B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8962A430-5BE5-467B-8C02-17BD67B23B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8962A430-5BE5-467B-8C02-17BD67B23B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320FC571-2A79-45DF-85FC-E57C7232A8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320FC571-2A79-45DF-85FC-E57C7232A8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320FC571-2A79-45DF-85FC-E57C7232A8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320FC571-2A79-45DF-85FC-E57C7232A8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E16536-70D2-450B-B440-C9AE1BFD29E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E16536-70D2-450B-B440-C9AE1BFD29E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E16536-70D2-450B-B440-C9AE1BFD29E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E16536-70D2-450B-B440-C9AE1BFD29E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
