@@ -1,6 +1,6 @@
 # Property Generators
 
-This is roslyn source generator to save time writing access properties for private variables in Unity.
+Automatically generate public properties for your private fields in Unity, saving you boilerplate code and ensuring consistency between runtime and editor behaviors.
 
 # Table of Contents
 - [Installation](#installation)
