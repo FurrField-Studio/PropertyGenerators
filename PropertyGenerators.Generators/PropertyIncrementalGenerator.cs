@@ -119,6 +119,8 @@ public class PropertyIncrementalGenerator : IIncrementalGenerator
             containsGenerateEditorPropertyProperty = false;
         }
 
+        var staticKeyword = fieldSymbol.IsStatic ? "static" : "";
+
         if (containsGenerateReadOnlyProperty && containsGenerateEditorWritableProperty)
         {
             var propertySource = $@"
@@ -127,7 +129,7 @@ namespace {namespaceName}
     public partial class {className}{genericParameters}
     {{
         #if UNITY_EDITOR
-        public {fieldSymbol.Type.ToDisplayString()} {propertyName}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName}
         {{
             get => {fieldName};
             set => {fieldName} = value;
@@ -141,7 +143,9 @@ namespace {namespaceName}
             var hintName = $"{className}_{fieldName}_GenerateHybridProperty.g.cs";
 
             return (propertySource, hintName);
-        } else if (containsGenerateEditorPropertyProperty)
+        }
+
+        if (containsGenerateEditorPropertyProperty)
         {
             var propertySource = $@"
 #if UNITY_EDITOR
@@ -149,7 +153,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {fieldSymbol.Type.ToDisplayString()} {propertyName}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName}
         {{
             get => {fieldName};
             set => {fieldName} = value;
@@ -169,7 +173,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {fieldSymbol.Type.ToDisplayString()} {propertyName} {{ set => {fieldName} = value; }}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName} {{ set => {fieldName} = value; }}
     }}
 }}
 #endif
@@ -184,7 +188,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {fieldSymbol.Type.ToDisplayString()} {propertyName} => {fieldName};
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName} => {fieldName};
     }}
 }}
 ";
