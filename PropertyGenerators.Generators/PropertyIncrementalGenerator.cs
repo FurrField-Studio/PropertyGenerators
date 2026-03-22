@@ -129,13 +129,13 @@ namespace {namespaceName}
     public partial class {className}{genericParameters}
     {{
         #if UNITY_EDITOR
-        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)} {propertyName}
         {{
             get => {fieldName};
             set => {fieldName} = value;
         }}
         #else
-        public {fieldSymbol.Type.ToDisplayString()} {propertyName} => {fieldName};
+        public {fieldSymbol.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)} {propertyName} => {fieldName};
         #endif
     }}
 }}
@@ -153,7 +153,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)} {propertyName}
         {{
             get => {fieldName};
             set => {fieldName} = value;
@@ -173,7 +173,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName} {{ set => {fieldName} = value; }}
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)} {propertyName} {{ set => {fieldName} = value; }}
     }}
 }}
 #endif
@@ -188,7 +188,7 @@ namespace {namespaceName}
 {{
     public partial class {className}{genericParameters}
     {{
-        public {staticKeyword} {fieldSymbol.Type.ToDisplayString()} {propertyName} => {fieldName};
+        public {staticKeyword} {fieldSymbol.Type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat)} {propertyName} => {fieldName};
     }}
 }}
 ";
